@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnproodian/team-profile-generator-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnproodian/team-profile-generator-challenge/issues"
+  },
+  "homepage": "https://github.com/johnproodian/team-profile-generator-challenge#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
