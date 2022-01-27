@@ -1,3 +1,6 @@
+// initialize prompts
+    // prompt manager --> 
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generatePage = require('./src/page-template');
@@ -8,6 +11,29 @@ const promptManager = () => {
             type: 'input',
             name: 'managerName',
             message: 'What is your name? '
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your employee id?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?'
+        },
+        {
+            type: 'input',
+            name: 'office',
+            message: 'What is your office number?'
+        },
+        {
+            type: 'confirm',
+            name: 'addEmployee',
+            message: 'Would you like to add another employee?'
+        }, 
+        {
+            // type: 
         }
     ])
 };
@@ -19,3 +45,5 @@ promptManager()
             if (err) throw new Error(err);
         })
     });
+
+    
