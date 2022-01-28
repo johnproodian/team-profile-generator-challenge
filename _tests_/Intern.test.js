@@ -7,4 +7,16 @@ test('creates an Intern object', () => {
     expect(intern.id).toBe('4');
     expect(intern.email).toBe('nobby@fakemail.com');
     expect(intern.school).toBe('UT');
+});
+
+test(`gets intern's role`, () => {
+    const intern = new Intern('Nobby', '4', 'nobby@fakemail.com', 'UT');
+
+    expect(intern.getRole()).toBe('Intern');
+});
+
+test(`gets intern's school`, () => {
+    const intern = new Intern('Nobby', '4', 'nobby@fakemail.com', 'UT');
+
+    expect(intern.getSchool()).toBe(intern.school);
 })

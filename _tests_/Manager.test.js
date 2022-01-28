@@ -3,25 +3,19 @@
 // Then, it will have methods that write the html, basically
 
 const Employee = require('../lib/Employee');
-jest.mock('../lib/Employee');
 const Manager = require('../lib/Manager');
 
-test('uses mock data for Employee', () => {
-    const employee = new Employee;
-    expect(employee).toEqual({
-        name: 'Bob',
-        id: '1',
-        email: 'Bob@fakemail.com'
-    });
-})
+test('creates a Manager object', () => {
+    const manager = new Manager('Bob', '1', 'Bob@fakemail.com', '101');
 
-// test('creates a Manager object', () => {
-//     const manager = new Manager(new Employee, '101');
+    expect(manager.name).toBe('Bob');
+    expect(manager.id).toEqual('1');
+    expect(manager.email).toEqual('Bob@fakemail.com');
+    expect(manager.officeNumber).toBe('101');
+});
 
-//     expect(Employee.name).toEqual('Bob');
+test("returns manager's role--'Manager'", () => {
+    const manager = new Manager('Bob', '1', 'Bob@fakemail.com', '101');
 
-//     expect(manager.name).toEqual('Bob');
-//     expect(manager.id).toEqual('1');
-//     expect(manager.email).toEqual('Bob@fakemail.com');
-//     expect(manager.officeNumber).toBe('101');
-// })
+    expect(manager.getRole()).toBe('Manager');
+});
