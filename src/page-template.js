@@ -1,7 +1,19 @@
-module.exports = templateData => {
+module.exports = employees => {
 
-    // destructure properties from templateData 
-    const {managerName} = templateData;
+const destructuredArr = []
+
+for (i = 0; i < employees.length; i++) {
+    
+}
+
+// const assignVar = function() {
+//     const 
+// }
+//     for (i = 0; i < employees.length; i++) {
+//         let {managerName, employeeName, id, email, office, github, school} = employees[i]
+
+//     }
+    
 
     return `
 <!DOCTYPE html>
@@ -40,3 +52,6 @@ module.exports = templateData => {
 </html>
     `
 }
+destructure(0);
+}
+

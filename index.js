@@ -2,6 +2,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generatePage = require('./src/page-template');
 
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+
 let employeeArr = []
 
 const promptManager = (employee) => {
@@ -84,20 +88,57 @@ const promptManager = (employee) => {
         }
     ])
     .then(managerData => {
-        employeeArr.push(managerData);
-        console.log(employeeArr);
-        let {additionalList} = managerData;
+        const {managerName, employeeName, id, email, office, github, school} = managerData;
+        let employee;
 
-        if (additionalList === 'None - finish building my team') {
-            console.log(`we're done!`);
+        if (managerName) {
+            employee = new Manager(managerName, id, email, office);
+
+            employeeArr.push(employee);
+            console.log(employee);
+            console.log(employeeArr);
+        } else if (github) {
+            employee = new Engineer(employeeName, id, email, github);
+
+            employeeArr.push(employee);
+            console.log(employee);
+            console.log(employeeArr);
         } else {
-            promptManager(additionalList);
+            employee = new Intern(employeeName, id, email, school);
+
+            employeeArr.push(employee)
+            console.log(employee);
+            console.log(employeeArr);
+        }
+
+        if (managerData.additionalList === 'None - finish building my team') {
+            console.log(`we're done!`);
+            return employeeArr;
+        } else {
+            promptManager(managerData.additionalList);
         }
     })
 };
 
 
 promptManager()
+        .then(employeeData => {
+            console.log(employeeData);
+        })
+    // .then(employeeData => {
+    //     generatePage(employeeData);
+    // });
+    // .then(employeeData => {
+    //     const pageHTML = generatePage(employeeData);
+    //     fs.writeFile('./dist/index.html', pageHTML, err => {
+    //         if (err) throw new Error(err);
+    //     });
+
+    // })
+
+
+
+
     // .then(managerData => {
     //     employeeArr.push(managerData);
     //     console.log(employeeArr);
