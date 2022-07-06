@@ -20,7 +20,7 @@ See the Screencastify walkthrough [here](https://drive.google.com/file/d/1avOMVt
 * Node.js
 
 ## (Recently Learned) Skills I Used
-* building an entire application using OOP principles
-* using ES6 class syntax to implement inheritance between classes
-* automated testing using Jest
-* dynamically generating HTML pages from the command line 
+* Building an entire application using OOP principles
+* Using ES6 class syntax to implement inheritance between classes
+* Automated testing using Jest
+* Dynamically generating HTML pages from the command line 
