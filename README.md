@@ -13,7 +13,7 @@ This is a Node.js command-line application that takes user input about employees
 2. Follow the command line prompts.
 
 ### Walkthrough
-See the Screencastify walkthrough [here](https://drive.google.com/file/d/1avOMVtH4TA0CncdyNX023dl0D7Y2C5DL/view). Upon completion of the prompts, the app should generate an HTML file along the lines of [this one](/generated-README.md).
+See the Screencastify walkthrough [here](https://drive.google.com/file/d/1avOMVtH4TA0CncdyNX023dl0D7Y2C5DL/view). Upon completion of the prompts, the app should generate an HTML file along the lines of [this one](/dist/index.html).
 
 ## Built With
 * JavaScript
