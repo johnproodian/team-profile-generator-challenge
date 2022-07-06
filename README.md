@@ -18,8 +18,6 @@ See the Screencastify walkthrough [here](https://drive.google.com/file/d/1avOMVt
 ## Built With
 * JavaScript
 * Node.js
-* Inquirer
-
 
 ## (Recently Learned) Skills I Used
 * building an entire application using OOP principles
